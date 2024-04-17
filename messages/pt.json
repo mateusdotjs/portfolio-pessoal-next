@@ -1,0 +1,58 @@
+{
+    "Header": {
+        "projects": "Projetos",
+        "tools": "Tecnologias",
+        "contact": "Contato"
+    },
+    "Hero": {
+        "greeting": "Olá! Eu sou Mateus",
+        "title": "Desenvolvedor <decorated>Full Stack</decorated>",
+        "description": "Utilizo meus conhecimentos de lógica e resolução de problemas na criação de experiências impactantes e inovadoras utilizando principalmente o ecossistema <bold>React</bold>, <bold>TypeScript</bold> e <bold>Node</bold>."
+    },
+    "Projects": {
+        "title": "<decorated>Projetos</decorated> que construí",
+        "link": "Visite mais projetos no GitHub",
+        "Vialerta": {
+            "description": "App Full Stack que disponibiliza o estado das linhas de Metrô de SP."
+        },
+        "API": {
+            "title": "API do Metrô de São Paulo",
+            "description": "API em Node que retorna estado das linhas de Metrô de SP via web scraping."
+        },
+        "Fintech": {
+            "description": "Um dashboard estilo bento feito com TypeScript."
+        }
+    },
+    "Tools": {
+        "title": "<decorated>Tecnologias</decorated> que uso",
+        "description": "Algumas das tecnologias que utilizo. Entre elas estão os frameworks mais modernos e populares. Passe o mouse sobre os elementos para ver sua descricão.",
+        "Next": {
+            "description": "Next.js é um framework React que permite renderização no servidor, geração de sites estáticos e navegação cliente-servidor para aplicações web."
+        },
+        "React": {
+            "description": "React é uma biblioteca JavaScript para construir interfaces de usuário."
+        },
+        "TypeScript": {
+            "description": "TypeScript é um superset do JavaScript que adiciona tipos estáticos."
+        },
+        "Tailwind": {
+            "description": "Tailwind CSS é um framework CSS de utilidade em primeiro lugar"
+        },
+        "Sass": {
+            "description": "Sass é uma linguagem de script de pré-processamento interpretada ou compilada em CSS."
+        },
+        "Node": {
+            "description": "Node é um runtime para JavaScript construído no motor JavaScript V8 do Chrome."
+        },
+        "Git": {
+            "description": "Git é um sistema de controle de versão distribuído usado para rastrear mudanças no código-fonte durante o desenvolvimento de software."
+        }
+    },
+    "Contact": {
+        "title": "Entre em <decorated>contato</decorated>",
+        "description": "Estou disponível para trabalho. Entre em contato por e-mail ou Whatsapp."
+    },
+    "Footer": {
+        "text": "Todos os direitos reservados."
+    }
+}
