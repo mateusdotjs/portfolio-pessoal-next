@@ -1,0 +1,58 @@
+{
+    "Header": {
+        "projects": "Projects",
+        "tools": "Tools",
+        "contact": "Contact"
+    },
+    "Hero": {
+        "greeting": "Hi! i'm Mateus",
+        "title": "<decorated>Full Stack</decorated> Developer",
+        "description": "I seek to apply my logical and problem-solving skills to create impactful and innovative experiences using mainly the <bold>React</bold>, <bold>TypeScript</bold> and <bold>Node</bold> ecosystem."
+    },
+    "Projects": {
+        "title": "<decorated>Projects</decorated> I built",
+        "link": "Visit more projects on GitHub",
+        "Vialerta": {
+            "description": "An app that provides the status of São Paulo's subway lines."
+        },
+        "API": {
+            "title": "São Paulo Subway API",
+            "description": "An API that returns the status of São Paulo's subway lines via web scraping."
+        },
+        "Fintech": {
+            "description": "A bento Dashboard project with TypeScript."
+        }
+    },
+    "Tools": {
+        "title": "<decorated>Tools</decorated> I use",
+        "description": "Some of the tools I use in my work. Among them are the most modern and popular frameworks. Hover over the elements to see their description.",
+        "Next": {
+            "description": "Next.js is a React framework that enables server-side rendering, static site generation, and seamless client-side navigation for web applications."
+        },
+        "React": {
+            "description": "React is a JavaScript library for building user interfaces."
+        },
+        "Typescript": {
+            "description": "TypeScript is a superset of JavaScript that adds static types."
+        },
+        "Tailwind": {
+            "description": "Tailwind CSS is a utility-first CSS framework."
+        },
+        "Sass": {
+            "description": "Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets."
+        },
+        "Node": {
+            "description": "Node is a JavaScript runtime built on Chrome's V8 JavaScript engine."
+        },
+        "Git": {
+            "description": "Git is a distributed version control system used for tracking changes in source code during software development."
+        }
+    },
+    "Contact": {
+        "title": "Get in <decorated>contact</decorated>",
+        "description": "I'm open to work. Send me an e-mail or contact me via Whatsapp."
+    },
+    "Footer": {
+        "text": "All rights reserved."
+    }
+}
