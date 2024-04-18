@@ -24,8 +24,8 @@
         }
     },
     "Tools": {
-        "title": "<decorated>Tecnologias</decorated> que uso",
-        "description": "Algumas das tecnologias que utilizo. Entre elas estão os frameworks mais modernos e populares. Passe o mouse sobre os elementos para ver sua descricão.",
+        "title": "<decorated>Tecnologias</decorated> que utilizo",
+        "description": "Entre elas estão os frameworks mais modernos e populares. Passe o mouse sobre os elementos para ver sua descricão.",
         "Next": {
             "description": "Next.js é um framework React que permite renderização no servidor, geração de sites estáticos e navegação cliente-servidor para aplicações web."
         },
