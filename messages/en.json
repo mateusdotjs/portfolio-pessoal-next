@@ -13,11 +13,11 @@
         "title": "<decorated>Projects</decorated> I built",
         "link": "Visit more projects on GitHub",
         "Vialerta": {
-            "description": "An app that provides the status of São Paulo's subway lines."
+            "description": "A full stack app that provides the status of São Paulo's subway lines."
         },
         "API": {
             "title": "São Paulo Subway API",
-            "description": "An API that returns the status of São Paulo's subway lines via web scraping."
+            "description": "Node API that returns the status of São Paulo's subway lines via web scraping."
         },
         "Fintech": {
             "description": "A bento Dashboard project with TypeScript."
@@ -32,7 +32,7 @@
         "React": {
             "description": "React is a JavaScript library for building user interfaces."
         },
-        "Typescript": {
+        "TypeScript": {
             "description": "TypeScript is a superset of JavaScript that adds static types."
         },
         "Tailwind": {
@@ -50,7 +50,29 @@
     },
     "Contact": {
         "title": "Get in <decorated>contact</decorated>",
-        "description": "I'm open to work. Send me an e-mail or contact me via Whatsapp."
+        "description": "I'm open to work. Send me an email or contact me via Whatsapp.",
+        "Form": {
+            "Name": {
+                "label": "Name",
+                "placeholder": "Seu name"
+            },
+            "Email": {
+                "label": "Email",
+                "placeholder": "Your email"
+            },
+            "Message": {
+                "label": "Message",
+                "placeholder": "Your message"
+            },
+            "Button": {
+                "text": "Send message",
+                "loading": "Sending..."
+            }
+        },
+        "Alert": {
+            "positive": "Email successfully sent. Thanks!",
+            "negative": "Failed to send email. Please try again."
+        }
     },
     "Footer": {
         "text": "All rights reserved."

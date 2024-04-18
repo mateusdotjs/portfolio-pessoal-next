@@ -7,13 +7,13 @@
     "Hero": {
         "greeting": "Olá! Eu sou Mateus",
         "title": "Desenvolvedor <decorated>Full Stack</decorated>",
-        "description": "Utilizo meus conhecimentos de lógica e resolução de problemas na criação de experiências impactantes e inovadoras utilizando principalmente o ecossistema <bold>React</bold>, <bold>TypeScript</bold> e <bold>Node</bold>."
+        "description": "Utilizo meu conhecimento de lógica e resolução de problemas na criação de experiências impactantes e inovadoras utilizando principalmente o ecossistema <bold>React</bold>, <bold>TypeScript</bold> e <bold>Node</bold>."
     },
     "Projects": {
         "title": "<decorated>Projetos</decorated> que construí",
         "link": "Visite mais projetos no GitHub",
         "Vialerta": {
-            "description": "App Full Stack que disponibiliza o estado das linhas de Metrô de SP."
+            "description": "App full stack que disponibiliza o estado das linhas de Metrô de SP."
         },
         "API": {
             "title": "API do Metrô de São Paulo",
@@ -50,7 +50,29 @@
     },
     "Contact": {
         "title": "Entre em <decorated>contato</decorated>",
-        "description": "Estou disponível para trabalho. Entre em contato por e-mail ou Whatsapp."
+        "description": "Estou disponível para trabalho. Entre em contato por email ou Whatsapp.",
+        "Form": {
+            "Name": {
+                "label": "Nome",
+                "placeholder": "Seu nome"
+            },
+            "Email": {
+                "label": "Email",
+                "placeholder": "Seu email"
+            },
+            "Message": {
+                "label": "Mensagem",
+                "placeholder": "Sua mensagem"
+            },
+            "Button": {
+                "text": "Enviar mensagem",
+                "loading": "Enviando..."
+            }
+        },
+        "Alert": {
+            "positive": "Mensagem enviada com sucesso. Obrigado!",
+            "negative": "Ocorreu um erro ao enviar sua mensagem. Tente novamente."
+        }
     },
     "Footer": {
         "text": "Todos os direitos reservados."

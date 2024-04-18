@@ -1,6 +1,7 @@
 import { ComponentProps } from "react";
 
 type InputProps = ComponentProps<"input"> & {
+  placeholder: string;
   label: string;
   error: string | null;
 };
@@ -8,6 +9,7 @@ type InputProps = ComponentProps<"input"> & {
 const Input = ({
   id,
   label,
+  placeholder,
   type,
   onChange,
   onBlur,
@@ -26,10 +28,10 @@ const Input = ({
         md:w-96"
         id={id}
         type={type}
-        placeholder={"Your " + label}
         onChange={onChange}
         onBlur={onBlur}
         value={value}
+        placeholder={placeholder}
       />
       {error && <p className="text-red-300">{error}</p>}
     </div>
