@@ -25,7 +25,7 @@
     },
     "Tools": {
         "title": "<decorated>Tools</decorated> I use",
-        "description": "Some of the tools I use in my work. Among them are the most modern and popular frameworks. Hover over the elements to see their description.",
+        "description": "Among them are the most modern and popular frameworks. Hover over the elements to see their description.",
         "Next": {
             "description": "Next.js is a React framework that enables server-side rendering, static site generation, and seamless client-side navigation for web applications."
         },
@@ -54,7 +54,7 @@
         "Form": {
             "Name": {
                 "label": "Name",
-                "placeholder": "Seu name"
+                "placeholder": "Your name"
             },
             "Email": {
                 "label": "Email",
