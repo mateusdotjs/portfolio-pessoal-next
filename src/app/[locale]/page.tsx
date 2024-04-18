@@ -14,8 +14,6 @@ export default function Home() {
   const toolsRef = useRef(null);
   const contactRef = useRef(null);
 
-  console.log(heroRef);
-
   type elementReturn = RefObject<HTMLDivElement> | null;
 
   const getElementByRef = (elementId: string): elementReturn => {

@@ -42,14 +42,13 @@ export default function Contact({
         process.env.NEXT_PUBLIC_PUBLIC_KEY as string
       );
 
-      console.log(response);
-      alert("Email successfully sent. Thanks!");
+      alert(t("Alert.positive"));
 
       name.setValue("");
       email.setValue("");
       message.setValue("");
     } catch (error) {
-      alert("Failed to send email. Please try again.");
+      alert(t("Alert.negative"));
       console.log(error);
     } finally {
       setLoading(false);
@@ -69,11 +68,28 @@ export default function Contact({
           className="mt-8 flex w-full flex-col gap-4 rounded-md border-[1px] border-neutral-700 bg-gradient-to-br 
         from-neutral-800 p-10 shadow-form md:w-auto lg:mt-0"
         >
-          <Input id={"name"} type={"text"} label={"Name"} {...name} />
-          <Input id={"email"} type={"email"} label={"E-mail"} {...email} />
-          <Textarea id={"message"} label={"Message"} {...message} />
+          <Input
+            id={"name"}
+            type={"text"}
+            label={t("Form.Name.label")}
+            placeholder={t("Form.Name.placeholder")}
+            {...name}
+          />
+          <Input
+            id={"email"}
+            type={"email"}
+            label={t("Form.Email.label")}
+            placeholder={t("Form.Email.placeholder")}
+            {...email}
+          />
+          <Textarea
+            id={"message"}
+            label={t("Form.Message.label")}
+            placeholder={t("Form.Message.placeholder")}
+            {...message}
+          />
           <ButtonFilled onClick={handleClick}>
-            {loading ? "Loading..." : "Send message"}
+            {loading ? t("Form.Button.loading") : t("Form.Button.text")}
           </ButtonFilled>
         </form>
         <div className="row-start-1 lg:col-start-2">

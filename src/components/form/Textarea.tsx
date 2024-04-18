@@ -1,6 +1,7 @@
 import { ComponentProps } from "react";
 
 type TextareaProps = ComponentProps<"textarea"> & {
+  placeholder: string;
   label: string;
   error: string | null;
 };
@@ -8,6 +9,7 @@ type TextareaProps = ComponentProps<"textarea"> & {
 const Textarea = ({
   id,
   label,
+  placeholder,
   onChange,
   onBlur,
   value,
@@ -24,10 +26,10 @@ const Textarea = ({
       outline-none transition duration-200 hover:border-indigo-400
       hover:bg-neutral-700"
         id={id}
-        placeholder={"Your " + label}
         onChange={onChange}
         onBlur={onBlur}
         value={value}
+        placeholder={placeholder}
       />
       {error && <p className="text-red-300">{error}</p>}
     </div>
