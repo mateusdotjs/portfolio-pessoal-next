@@ -2,6 +2,14 @@ import React, { Fragment } from "react";
 import escapeHTML from "escape-html";
 import { Text } from "slate";
 
+type CustomText = {
+  bold?: boolean;
+  code?: boolean;
+  italic?: boolean;
+  underline?: boolean;
+  text?: string | boolean;
+};
+
 export const serialize = (children: any[]) =>
   children.map((node, i) => {
     if (Text.isText(node)) {
@@ -9,7 +17,9 @@ export const serialize = (children: any[]) =>
         <span dangerouslySetInnerHTML={{ __html: escapeHTML(node.text) }} />
       );
 
-      if (node.bold) {
+      const customNode = node as CustomText;
+
+      if (customNode.bold) {
         text = (
           <strong className="font-bold text-neutral-300" key={i}>
             {text}
@@ -17,10 +27,10 @@ export const serialize = (children: any[]) =>
         );
       }
 
-      if (node.code) {
+      if (customNode.code) {
         text = (
           <code
-            className="border-neutral-700 rounded-md border-[1px] bg-neutral-800 px-2"
+            className="rounded-md border-[1px] border-neutral-700 bg-neutral-800 px-2"
             key={i}
           >
             {text}
@@ -28,15 +38,15 @@ export const serialize = (children: any[]) =>
         );
       }
 
-      if (node.italic) {
+      if (customNode.italic) {
         text = <em key={i}>{text}</em>;
       }
 
-      if (node.underline) {
+      if (customNode.underline) {
         text = <u key={i}>{text}</u>;
       }
 
-      if (node.text === "") {
+      if (customNode.text === "") {
         text = <br />;
       }
 
@@ -89,7 +99,12 @@ export const serialize = (children: any[]) =>
         );
       case "link":
         return (
-          <a href={escapeHTML(node.url)} className="underline" target="_blank" key={i}>
+          <a
+            href={escapeHTML(node.url)}
+            className="underline"
+            target="_blank"
+            key={i}
+          >
             {serialize(node.children)}
           </a>
         );
