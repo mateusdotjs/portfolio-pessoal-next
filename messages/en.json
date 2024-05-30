@@ -54,7 +54,7 @@
         "Form": {
             "Name": {
                 "label": "Name",
-                "placeholder": "Seu name"
+                "placeholder": "Your name"
             },
             "Email": {
                 "label": "Email",
@@ -76,5 +76,9 @@
     },
     "Footer": {
         "text": "All rights reserved."
+    },
+    "Blog": {
+        "updatedAt": "Updated at",
+        "error": "An error ocurred while processing your request. \nTry again."
     }
 }
