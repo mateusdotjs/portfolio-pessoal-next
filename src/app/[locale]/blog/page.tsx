@@ -30,23 +30,21 @@ export default async function BlogPage({
   const { docs } = data;
 
   return (
-    <main className="mx-auto flex w-[700px] flex-1 pt-10">
-      <ul className="flex flex-col gap-10">
-        {docs.map((doc) => {
-          return (
-            <li key={doc.id}>
-              <Post
-                id={doc.id}
-                title={doc.title}
-                description={doc.description}
-                createdAt={doc.createdAt}
-                tags={doc.tags}
-                locale={locale}
-              />
-            </li>
-          );
-        })}
-      </ul>
-    </main>
+    <ul className="flex flex-col gap-10">
+      {docs.map((doc) => {
+        return (
+          <li key={doc.id}>
+            <Post
+              id={doc.id}
+              title={doc.title}
+              description={doc.description}
+              createdAt={doc.createdAt}
+              tags={doc.tags}
+              locale={locale}
+            />
+          </li>
+        );
+      })}
+    </ul>
   );
 }
