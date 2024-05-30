@@ -76,5 +76,9 @@
     },
     "Footer": {
         "text": "Todos os direitos reservados."
+    },
+    "Blog": {
+        "updatedAt": "Atualizado em",
+        "error": "Ocorreu um erro ao processar sua requisição. \nTente novamente."
     }
 }

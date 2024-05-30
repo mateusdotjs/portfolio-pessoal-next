@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import Menu from "@/assets/menu.svg";
 import LanguageSwitcher from "./language-switcher/language-switcher";
+import { Link } from "./navigation";
+import { usePathname } from "next/navigation";
 
 type functionProps = (elementId: string) => void;
 
@@ -12,6 +14,7 @@ export default function Header({
 }: {
   scrollToDiv: functionProps;
 }) {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations("Header");
 
@@ -30,11 +33,11 @@ export default function Header({
 
   return (
     <header className="fixed z-10 w-full items-center border-b-[1px] border-neutral-200 bg-white p-6">
-      <div className="justify-between relative mx-auto flex w-full max-w-screen-2xl md:justify-center">
+      <div className="relative mx-auto flex w-full max-w-screen-2xl justify-between">
         <LanguageSwitcher />
         <button
           aria-label="menu"
-          className="rounded-md ml-auto border-[1px] border-neutral-300 bg-neutral-50 p-1 md:hidden"
+          className="ml-auto rounded-md border-[1px] border-neutral-300 bg-neutral-50 p-1 md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Menu />
@@ -70,6 +73,12 @@ export default function Header({
             </li>
           </ul>
         </nav>
+        <Link
+          href={`/blog`}
+          className="rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-500 px-10 py-1 font-bold text-white"
+        >
+          Blog
+        </Link>
       </div>
     </header>
   );
