@@ -1,4 +1,4 @@
-import { formatDate } from "../../helper/formatDate";
+import { formatDate } from "@/helper/formatDate";
 import { Link } from "../navigation";
 
 export default function Post({
@@ -12,7 +12,14 @@ export default function Post({
   const createdDate = formatDate(createdAt, locale);
 
   return (
-    <div className="relative flex">
+    <div className="relative">
+      <div
+        className="mb-3 w-auto max-w-[132px] rounded-2xl border-[1px] border-neutral-800 bg-gradient-to-br 
+        from-neutral-800 to-neutral-950 px-5 py-1
+       font-normal text-white lg:absolute lg:left-[-180px] lg:mb-0"
+      >
+        {createdDate}
+      </div>
       <Link href={`blog/post/${id}`}>
         <p className="text-xl font-semibold text-white">{title}</p>
         <p className="mb-3 line-clamp-2 font-normal text-neutral-500">
@@ -29,13 +36,6 @@ export default function Post({
           ))}
         </div>
       </Link>
-      <div
-        className="absolute left-[-180px] rounded-2xl border-[1px] border-neutral-800 
-        bg-gradient-to-br from-neutral-800 to-neutral-950 px-5
-       py-1 font-normal text-white"
-      >
-        {createdDate}
-      </div>
     </div>
   );
 }

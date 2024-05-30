@@ -26,13 +26,13 @@ export default async function PostPage({
   const t = await getTranslations("Blog");
 
   return (
-    <main className="mx-auto flex w-[700px] flex-1 flex-col pt-10">
+    <div className="flex-1 flex-col">
       <h1 className="mb-3 text-4xl font-semibold text-white">{post.title}</h1>
       <p className=" mb-3 text-neutral-300">{post.description}</p>
       <p className="mb-5 text-sm text-neutral-500">
         {t("updatedAt")} {updatedDate}.
       </p>
       <div>{serialize(post.content)}</div>
-    </main>
+    </div>
   );
 }
