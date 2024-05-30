@@ -1,6 +1,5 @@
-import LanguageSwitcher from "../../../components/language-switcher/language-switcher";
 import { Metadata } from "next";
-import Post from "../../../components/blog/post-card";
+import Post from "@/components/blog/post-card";
 
 export const metadata: Metadata = {
   title: "Mateus Soares | Blog",
