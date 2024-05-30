@@ -33,11 +33,11 @@ export default function Header({
 
   return (
     <header className="fixed z-10 w-full items-center border-b-[1px] border-neutral-200 bg-white p-6">
-      <div className="relative mx-auto flex w-full max-w-screen-2xl justify-between">
+      <div className="relative mx-auto flex w-full max-w-screen-2xl items-center justify-between">
         <LanguageSwitcher />
         <button
           aria-label="menu"
-          className="ml-auto rounded-md border-[1px] border-neutral-300 bg-neutral-50 p-1 md:hidden"
+          className="order-2 ml-3 rounded-md border-[1px] border-neutral-300 bg-neutral-50 p-1 md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Menu />
@@ -75,7 +75,7 @@ export default function Header({
         </nav>
         <Link
           href={`/blog`}
-          className="rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-500 px-10 py-1 font-bold text-white"
+          className="order-1 ml-auto rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-500 px-10 py-1 font-bold text-white md:ml-0"
         >
           Blog
         </Link>

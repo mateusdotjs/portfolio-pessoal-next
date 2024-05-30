@@ -1,5 +1,5 @@
-import { formatDate } from "../../../../../helper/formatDate";
-import { serialize } from "../../../../../components/blog/serialize";
+import { formatDate } from "@/helper/formatDate";
+import { serialize } from "@/components/blog/serialize";
 import { getTranslations } from "next-intl/server";
 
 async function fetchPost(locale: string, id: string) {
