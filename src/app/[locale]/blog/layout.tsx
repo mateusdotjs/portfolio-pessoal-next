@@ -1,7 +1,14 @@
 import { ReactNode } from "react";
-import LanguageSwitcher from "../../../components/language-switcher/language-switcher";
-import { Link } from "../../../components/navigation";
+import LanguageSwitcher from "@/components/language-switcher/language-switcher";
+import { Link } from "@/components/navigation";
 import { useTranslations } from "next-intl";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mateus Soares | Blog",
+  description:
+    "A Blog that summarizes the lastest news in web development, focusing in javascript frameworks like NextJS, React, NestJS and others.",
+};
 
 export default function BlogLayout({ children }: { children: ReactNode }) {
   const t = useTranslations("Footer");
