@@ -1,14 +1,14 @@
 import { formatDate } from "@/helper/formatDate";
 import { Link } from "../navigation";
 
-export default function Post({
+export default function PostCard({
   id,
   title,
   description,
   createdAt,
   tags,
   locale,
-}: PostType) {
+}: PostCardProps) {
   const createdDate = formatDate(createdAt, locale);
 
   return (
