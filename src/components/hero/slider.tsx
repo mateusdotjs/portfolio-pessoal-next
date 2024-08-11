@@ -43,7 +43,7 @@ export default function Slider() {
 
   return (
     <div className="relative flex max-h-[600px] overflow-hidden">
-      <div className="absolute top-0 z-50 h-10 w-full bg-gradient-to-b from-white to-transparent"></div>
+      <div className="absolute top-0 z-40 h-10 w-full bg-gradient-to-b from-white to-transparent"></div>
       <SliderColumn
         items={leftItems}
         initialY={0}
@@ -56,7 +56,7 @@ export default function Slider() {
         animateY={0}
         duration={12}
       />
-      <div className="absolute bottom-0 z-50 h-10 w-full bg-gradient-to-t from-white to-transparent"></div>
+      <div className="absolute bottom-0 z-40 h-10 w-full bg-gradient-to-t from-white to-transparent"></div>
     </div>
   );
 }

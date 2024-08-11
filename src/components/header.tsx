@@ -32,7 +32,7 @@ export default function Header({
   }, []);
 
   return (
-    <header className="fixed z-10 w-full items-center border-b-[1px] border-neutral-200 bg-white p-6">
+    <header className="fixed z-50 w-full items-center border-b-[1px] border-neutral-200 bg-white p-6">
       <div className="relative mx-auto flex w-full max-w-screen-2xl items-center justify-between">
         <LanguageSwitcher />
         <button
@@ -46,7 +46,7 @@ export default function Header({
           className={`right-5 top-20 z-50 rounded-md bg-neutral-100 px-7 py-5 md:static md:flex md:items-center md:bg-transparent md:p-0
         ${isOpen ? "absolute border-[1px] border-neutral-300" : "hidden"}`}
         >
-          <ul className="flex flex-col gap-5 text-neutral-700 md:flex-row md:gap-10">
+          <ul className="flex flex-col gap-5 text-base text-neutral-600 md:flex-row md:gap-14">
             <li
               className="cursor-pointer hover:text-indigo-500"
               onClick={() => scrollToDiv("hero")}
@@ -73,12 +73,6 @@ export default function Header({
             </li>
           </ul>
         </nav>
-        <Link
-          href={`/blog`}
-          className="order-1 ml-auto rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-500 px-10 py-1 font-bold text-white md:ml-0"
-        >
-          Blog
-        </Link>
       </div>
     </header>
   );
