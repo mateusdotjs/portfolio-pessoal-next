@@ -5,9 +5,8 @@
         "contact": "Contact"
     },
     "Hero": {
-        "greeting": "Hi! i'm Mateus",
-        "title": "<decorated>Full Stack</decorated> Developer",
-        "description": "I seek to apply my logical and problem-solving skills to create impactful and innovative experiences using mainly the <bold>React</bold>, <bold>TypeScript</bold> and <bold>Node</bold> ecosystem."
+        "title": "<br>Transforming</br> <br>code into</br> <decorated><br>digital</br> solutions</decorated>",
+        "description": "A full stack developer located at São Paulo, Brazil."
     },
     "Projects": {
         "title": "<decorated>Projects</decorated> I built",

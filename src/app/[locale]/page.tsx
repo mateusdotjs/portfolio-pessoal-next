@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/hero";
+import Hero from "@/components/hero/hero";
 import Projects from "@/components/projects/projects";
 import Tools from "@/components/tools/tools";
 import Contact from "@/components/contact";
