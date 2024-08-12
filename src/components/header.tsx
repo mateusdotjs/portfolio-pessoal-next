@@ -32,7 +32,7 @@ export default function Header({
   }, []);
 
   return (
-    <header className="fixed top-0 z-50 flex h-20 w-full items-center border-b-[1px] border-neutral-200 bg-white">
+    <header className="fixed top-0 z-50 flex h-20 w-full items-center border-b-[1px] border-neutral-200 bg-white px-3">
       <div className="relative mx-auto flex w-full max-w-screen-2xl items-center justify-between">
         <LanguageSwitcher />
         <button
