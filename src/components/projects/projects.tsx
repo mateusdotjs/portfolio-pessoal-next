@@ -33,7 +33,7 @@ export default function Projects({
   return (
     <section
       ref={refer}
-      className="flex flex-col items-center bg-neutral-950 px-4 py-16"
+      className="flex flex-col items-center bg-neutral-950 px-4 py-24"
     >
       <h2 className="text-center text-4xl font-medium text-white md:text-5xl lg:text-left">
         {t.rich("title", {

@@ -32,7 +32,7 @@ export default function Header({
   }, []);
 
   return (
-    <header className="fixed z-50 w-full items-center border-b-[1px] border-neutral-200 bg-white p-6">
+    <header className="fixed top-0 z-50 flex h-20 w-full items-center border-b-[1px] border-neutral-200 bg-white">
       <div className="relative mx-auto flex w-full max-w-screen-2xl items-center justify-between">
         <LanguageSwitcher />
         <button
@@ -47,11 +47,18 @@ export default function Header({
         ${isOpen ? "absolute border-[1px] border-neutral-300" : "hidden"}`}
         >
           <ul className="flex flex-col gap-5 text-base text-neutral-600 md:flex-row md:gap-14">
+            {/* to-do: remover código duplicado */}
             <li
               className="cursor-pointer hover:text-indigo-500"
               onClick={() => scrollToDiv("hero")}
             >
               <a>Home</a>
+            </li>
+            <li
+              className="cursor-pointer hover:text-indigo-500"
+              onClick={() => scrollToDiv("about")}
+            >
+              <a>{t("about")}</a>
             </li>
             <li
               className="cursor-pointer hover:text-indigo-500"

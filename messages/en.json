@@ -1,5 +1,6 @@
 {
     "Header": {
+        "about": "About",
         "projects": "Projects",
         "tools": "Tools",
         "contact": "Contact"
@@ -7,6 +8,11 @@
     "Hero": {
         "title": "<br>Transforming</br> <br>code into</br> <decorated><br>digital</br> solutions</decorated>",
         "description": "A full stack developer located at São Paulo, Brazil."
+    },
+    "About": {
+        "title": "About me",
+        "greeting": "Hey, I'm Mateus",
+        "text": "I'm a web developer with a passion for learning and exploring new technologies. I have a deep curiosity about all aspects of software development, from designing user interfaces to building robust back-end architectures. I dedicate my time to honing my skills, continuously studying to understand the principles that underpin both front-end and back-end development."
     },
     "Projects": {
         "title": "<decorated>Projects</decorated> I built",

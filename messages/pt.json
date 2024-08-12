@@ -1,5 +1,6 @@
 {
     "Header": {
+        "about": "Sobre",
         "projects": "Projetos",
         "tools": "Tecnologias",
         "contact": "Contato"
@@ -7,6 +8,11 @@
     "Hero": {
         "title": "<br>Transformando</br> <br>código em</br> <decorated><br>soluções</br> digitais</decorated>",
         "description": "Um desenvolvedor full stack localizado em São Paulo, Brasil."
+    },
+    "About": {
+        "title": "Sobre mim",
+        "greeting": "Olá, eu sou Mateus",
+        "text": "Sou um desenvolvedor web com paixão por aprender e explorar novas tecnologias. Tenho uma curiosidade profunda por todos os aspectos do desenvolvimento de software, desde o design de interfaces de usuário até a construção de arquiteturas robustas de back-end. Dedico meu tempo ao aprimoramento das minhas habilidades, estudando continuamente para entender os princípios que fundamentam tanto o front-end quanto o back-end."
     },
     "Projects": {
         "title": "<decorated>Projetos</decorated> que construí",

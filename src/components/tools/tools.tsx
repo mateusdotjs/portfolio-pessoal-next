@@ -48,7 +48,7 @@ export default function Tools({ refer }: { refer: RefObject<HTMLDivElement> }) {
   ];
 
   return (
-    <section ref={refer} className=" py-16">
+    <section ref={refer} className=" py-24">
       <div className="mx-auto grid w-full max-w-screen-2xl grid-cols-1 px-5 lg:grid-cols-2">
         <div>
           <h2 className="text-center text-4xl font-medium text-black md:text-5xl lg:text-left">

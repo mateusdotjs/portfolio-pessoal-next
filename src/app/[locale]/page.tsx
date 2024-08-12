@@ -7,9 +7,11 @@ import Contact from "@/components/contact";
 import { RefObject, useRef } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import About from "../../components/about/about";
 
 export default function Home() {
   const heroRef = useRef(null);
+  const aboutRef = useRef(null)
   const projectsRef = useRef(null);
   const toolsRef = useRef(null);
   const contactRef = useRef(null);
@@ -20,6 +22,9 @@ export default function Home() {
     switch (elementId) {
       case "hero":
         return heroRef;
+
+        case "about":
+        return aboutRef;
 
       case "projects":
         return projectsRef;
@@ -52,6 +57,7 @@ export default function Home() {
       <Header scrollToDiv={scrollToDiv} />
       <main>
         <Hero refer={heroRef} />
+        <About refer={aboutRef}/>
         <Projects refer={projectsRef} />
         <Tools refer={toolsRef} />
         <Contact refer={contactRef} />
