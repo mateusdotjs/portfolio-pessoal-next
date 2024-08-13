@@ -58,7 +58,7 @@ export default function Contact({
   return (
     <section
       ref={refer}
-      className="flex flex-col items-center bg-neutral-950 px-4 py-24"
+      className="flex flex-col items-center bg-neutral-900 px-4 py-24"
     >
       <div
         className="mx-auto grid w-full max-w-screen-2xl grid-cols-1 

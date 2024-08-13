@@ -1,39 +1,37 @@
+import Link from "next/link";
 import ButtonFilled from "../buttons/ButtonFilled";
-import ButtonOutlined from "../buttons/ButtonOutlined";
+import { useTranslations } from "next-intl";
 
 type ProjectProps = {
   title: string;
   text: string;
-  repoLink: string;
-  demoLink: string;
+  link: string;
 };
 
-export default function Project({
-  title,
-  text,
-  repoLink,
-  demoLink,
-}: ProjectProps) {
+export default function Project({ title, text, link }: ProjectProps) {
+  const t = useTranslations("Projects");
+
   return (
     <div
-      className="flex rounded-md p-[2px] 
+      className="flex rounded-md p-[1px] group
     hover:bg-gradient-to-br hover:from-purple-600
     hover:via-indigo-400 hover:to-blue-500"
     >
       <div
-        className="flex w-full flex-col rounded-md 
-        border-[1px] border-neutral-800 bg-neutral-900 p-7 transition 
-        duration-200 md:w-96"
+        className="flex w-full flex-col gap-5 
+        rounded-md border-[1px] border-neutral-700 bg-neutral-800 p-7 
+        transition duration-200 md:w-96"
       >
-        <span className="mb-2 text-xl text-white">{title}</span>
-        <span className="mb-8 flex-1 text-lg text-neutral-500">{text}</span>
+        <span className="text-xl font-medium text-neutral-100">{title}</span>
+        <span className="flex-1 text-lg text-neutral-400">{text}</span>
         <div className="flex gap-3">
-          <a href={repoLink} target="_blank">
-            <ButtonOutlined>Repo</ButtonOutlined>
-          </a>
-          <a href={demoLink} target="_blank">
-            <ButtonFilled>Demo</ButtonFilled>
-          </a>
+          {link && (
+            <Link href={link} target="_blank">
+              <span className="text-lg font-medium text-indigo-400 underline-offset-4 hover:underline">
+                {t("projectLink")}
+              </span>
+            </Link>
+          )}
         </div>
       </div>
     </div>

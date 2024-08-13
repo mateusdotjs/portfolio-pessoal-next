@@ -16,7 +16,8 @@
     },
     "Projects": {
         "title": "<decorated>Projetos</decorated> que construí",
-        "link": "Visite mais projetos no GitHub",
+        "projectLink": "Visite este projeto",
+        "githubLink": "Visite todos os projetos no GitHub",
         "Vialerta": {
             "description": "App full stack que disponibiliza o estado das linhas de Metrô de SP."
         },
@@ -26,6 +27,9 @@
         },
         "Fintech": {
             "description": "Um dashboard estilo bento feito com TypeScript."
+        },
+        "Doit": {
+            "description": "Em construção - Gerenciador de projetos recorrentes feito com Next.js e NestJS."
         }
     },
     "Tools": {
