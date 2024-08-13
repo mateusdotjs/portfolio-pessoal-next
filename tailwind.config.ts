@@ -12,6 +12,9 @@ const config: Config = {
       boxShadow: {
         form: "0 0 100px #3730a3",
       },
+      animation: {
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
     },
   },
   plugins: [],
