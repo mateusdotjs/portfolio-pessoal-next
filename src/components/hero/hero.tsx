@@ -9,7 +9,7 @@ export default function Hero({ refer }: { refer: RefObject<HTMLDivElement> }) {
   const t = useTranslations("Hero");
 
   return (
-    <section ref={refer} className="mt-20 p-24 px-3">
+    <section ref={refer} className="mt-20 py-24 px-3">
       <div className="mx-auto grid max-w-screen-xl grid-cols-1 grid-rows-1 place-items-center bg-white md:grid-cols-2">
         <div className="flex flex-col gap-8">
           <h1 className="text-center text-5xl font-semibold leading-snug text-neutral-900 md:text-left md:text-6xl md:leading-[1.2]">

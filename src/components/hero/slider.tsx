@@ -1,17 +1,17 @@
 "use client";
 
-import Javascript from "@/assets/slider/javascript.svg";
-import Typescript from "@/assets/slider/typescript.svg";
-import Nest from "@/assets/slider/nestjs.svg";
-import Node from "@/assets/slider/node.svg";
-import Next from "@/assets/slider/next.svg";
-import React from "@/assets/slider/reactjs.svg";
-import Tailwind from "@/assets/slider/tailwind.svg";
-import Sass from "@/assets/slider/scss.svg";
-import Mongo from "@/assets/slider/mongo.svg";
-import MySQL from "@/assets/slider/mysql.svg";
-import Git from "@/assets/slider/git.svg";
-import Docker from "@/assets/slider/docker.svg";
+import Javascript from "@/assets/tools/javascript.svg";
+import Typescript from "@/assets/tools/typescript.svg";
+import Nest from "@/assets/tools/nestjs.svg";
+import Node from "@/assets/tools/node.svg";
+import Next from "@/assets/tools/next.svg";
+import React from "@/assets/tools/reactjs.svg";
+import Tailwind from "@/assets/tools/tailwind.svg";
+import Sass from "@/assets/tools/scss.svg";
+import Mongo from "@/assets/tools/mongo.svg";
+import MySQL from "@/assets/tools/mysql.svg";
+import Git from "@/assets/tools/git.svg";
+import Docker from "@/assets/tools/docker.svg";
 import { useEffect, useState } from "react";
 import SliderColumn from "./sliderColumn";
 

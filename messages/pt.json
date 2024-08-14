@@ -44,6 +44,21 @@
         "TypeScript": {
             "description": "TypeScript é um superset do JavaScript que adiciona tipos estáticos."
         },
+        "Javascript": {
+            "description": "JavaScript é uma linguagem de programação que possibilita páginas web interativas."
+        },
+        "Nest": {
+            "description": "Nest é um framework progressivo de Node.js para construir aplicações eficientes, confiáveis e escaláveis no lado do servidor."
+        },
+        "Mysql": {
+            "description": "MySQL é um sistema de gerenciamento de banco de dados relacional de código aberto."
+        },
+        "Mongo": {
+            "description": "MongoDB é um programa de banco de dados NoSQL orientado a documentos, multiplataforma."
+        },
+        "Docker": {
+            "description": "Docker é uma plataforma para desenvolver, enviar e executar aplicações em contêineres."
+        },
         "Tailwind": {
             "description": "Tailwind CSS é um framework CSS de utilidade em primeiro lugar"
         },
