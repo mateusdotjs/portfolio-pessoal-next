@@ -51,7 +51,12 @@ export default function Projects({
       ref={refer}
       className="flex flex-col items-center bg-neutral-900 px-4 py-24"
     >
-      <h2 className="text-center text-4xl font-medium text-white md:text-5xl lg:text-left">
+      <motion.h2
+        className="text-center text-4xl font-medium text-white md:text-5xl lg:text-left"
+        initial={{ opacity: 0, y: "90px" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{once: true,margin: "-150px"}}
+      >
         {t.rich("title", {
           decorated: (chunk) => (
             <span className="bg-gradient-to-br from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -61,7 +66,7 @@ export default function Projects({
         })}
 
         <span className="text-purple-500">.</span>
-      </h2>
+      </motion.h2>
       <div className="mx-auto flex w-full max-w-screen-2xl flex-col items-center">
         <motion.ul
           className="mb-12 mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3"

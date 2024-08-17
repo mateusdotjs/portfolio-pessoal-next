@@ -3,7 +3,7 @@
 import Hero from "@/components/hero/hero";
 import Projects from "@/components/projects/projects";
 import Tools from "@/components/tools/tools";
-import Contact from "@/components/contact";
+import Contact from "@/components/contact/contact";
 import { RefObject, useRef } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";

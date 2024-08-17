@@ -89,13 +89,28 @@ export default function Tools({ refer }: { refer: RefObject<HTMLDivElement> }) {
     },
   };
 
-
+  const fadeToRight = {
+    hidden: { opacity: 0, x: "-90px" },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+      },
+    },
+  };
 
   return (
     <section ref={refer} className="relative overflow-x-hidden py-24">
       <div className="mx-auto grid w-full max-w-screen-2xl grid-cols-1 px-5 lg:grid-cols-2">
         <div>
-          <h2 className="text-center text-4xl font-medium text-black md:text-5xl lg:text-left">
+          <motion.h2
+            className="text-center text-4xl font-medium text-black md:text-5xl lg:text-left"
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeToRight}
+            viewport={{ once: true,margin: "-150px" }}
+          >
             {t.rich("title", {
               decorated: (chunk) => (
                 <span className="bg-gradient-to-br from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -104,10 +119,15 @@ export default function Tools({ refer }: { refer: RefObject<HTMLDivElement> }) {
               ),
             })}
             <span className="text-purple-500">.</span>
-          </h2>
-          <span className="my-5 hidden text-xl text-neutral-600 lg:block">
+          </motion.h2>
+          <motion.span
+            className="my-5 hidden text-xl text-neutral-600 lg:block"
+            initial={{ opacity: 0, x: "-90px" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-150px" }}
+          >
             {t("description")}
-          </span>
+          </motion.span>
           {toolDescription && (
             <span className="hidden text-xl text-indigo-600 lg:block">
               {toolDescription}
@@ -119,7 +139,7 @@ export default function Tools({ refer }: { refer: RefObject<HTMLDivElement> }) {
           variants={list}
           initial="hidden"
           whileInView="visible"
-          viewport={{once: true}}
+          viewport={{ once: true }}
         >
           {technologies.map((technology, index) => {
             return (

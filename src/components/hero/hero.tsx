@@ -18,18 +18,15 @@ export default function Hero({ refer }: { refer: RefObject<HTMLDivElement> }) {
         className="mx-auto grid max-w-screen-xl grid-cols-1 grid-rows-1 place-items-center bg-white md:grid-cols-2"
       >
         <div className="flex flex-col gap-8">
-          <h1 className="text-center text-5xl font-semibold leading-snug text-neutral-900 md:text-left md:text-6xl md:leading-[1.2]">
+          <h1 className="text-center text-5xl font-semibold leading-snug text-neutral-900 md:text-left md:text-6xl md:leading-tight">
             {t.rich("title", {
               decorated: (chunk) => (
                 <span className="bg-gradient-to-br from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
                   {chunk}
                 </span>
               ),
-              br: (chunk) => (
-                <>
-                  {chunk}
-                  <br />
-                </>
+              br: () => (
+                <br/>
               ),
             })}
             ✨
