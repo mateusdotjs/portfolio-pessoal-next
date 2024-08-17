@@ -6,13 +6,19 @@ import Whatsapp from "@/assets/social/whatsapp.svg";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function About({ refer }: { refer: RefObject<HTMLDivElement> }) {
   const t = useTranslations("About");
 
   return (
-    <section ref={refer} className="lg:pt-4 lg:pb-24">
-      <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-10 rounded-xl border-neutral-200 bg-neutral-50 px-10 py-14 md:flex-row lg:border-2">
+    <section ref={refer} className="lg:pb-24 lg:pt-4">
+      <motion.div
+        className="mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-10 rounded-xl border-neutral-200 bg-neutral-50 px-10 py-14 md:flex-row lg:border-2"
+        initial={{ y: "100px", opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <div className="flex justify-center">
           <div className="flex h-64 w-64 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 via-indigo-400 to-blue-500">
             <Image
@@ -32,7 +38,7 @@ export default function About({ refer }: { refer: RefObject<HTMLDivElement> }) {
             {t("greeting")}👋
           </p>
           <p className="mb-10 text-xl text-neutral-500">{t("text")}</p>
-          <div className="flex gap-6">
+          <motion.div className="flex gap-6">
             {/* to-do: remover código duplicado */}
             <Link
               href={"https://www.linkedin.com/in/mateus-soares27/"}
@@ -49,9 +55,9 @@ export default function About({ refer }: { refer: RefObject<HTMLDivElement> }) {
             >
               <Whatsapp />
             </Link>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

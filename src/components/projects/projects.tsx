@@ -1,8 +1,20 @@
 import { RefObject } from "react";
 import Project from "./project";
 import { useTranslations } from "next-intl";
-import { link } from "fs";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const list = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
 
 export default function Projects({
   refer,
@@ -51,7 +63,13 @@ export default function Projects({
         <span className="text-purple-500">.</span>
       </h2>
       <div className="mx-auto flex w-full max-w-screen-2xl flex-col items-center">
-        <div className="mb-12 mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <motion.ul
+          className="mb-12 mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3"
+          variants={list}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-150px" }}
+        >
           {projects.map((project, index) => {
             return (
               <Project
@@ -62,7 +80,7 @@ export default function Projects({
               />
             );
           })}
-        </div>
+        </motion.ul>
         <Link
           href="https://github.com/mateusdotjs?tab=repositories"
           target="_blank"

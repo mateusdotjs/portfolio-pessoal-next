@@ -15,6 +15,8 @@ import Mysql from "@/assets/tools/mysql.svg";
 import Mongo from "@/assets/tools/mongo.svg";
 import { RefObject, useState } from "react";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import { once } from "events";
 
 export default function Tools({ refer }: { refer: RefObject<HTMLDivElement> }) {
   const [toolDescription, setToolDescription] = useState<string | null>(null);
@@ -73,6 +75,22 @@ export default function Tools({ refer }: { refer: RefObject<HTMLDivElement> }) {
     },
   ];
 
+  const list = {
+    hidden: {
+      opacity: 0,
+      y: "90px",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+
+
   return (
     <section ref={refer} className="relative overflow-x-hidden py-24">
       <div className="mx-auto grid w-full max-w-screen-2xl grid-cols-1 px-5 lg:grid-cols-2">
@@ -96,7 +114,13 @@ export default function Tools({ refer }: { refer: RefObject<HTMLDivElement> }) {
             </span>
           )}
         </div>
-        <div className="z-40 mt-12 grid grid-cols-2 justify-items-center gap-4 justify-self-center md:grid-cols-3 xl:grid-cols-4">
+        <motion.ul
+          className="z-40 mt-12 grid grid-cols-2 justify-items-center gap-4 justify-self-center md:grid-cols-3 xl:grid-cols-4"
+          variants={list}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true}}
+        >
           {technologies.map((technology, index) => {
             return (
               <Tool
@@ -108,7 +132,7 @@ export default function Tools({ refer }: { refer: RefObject<HTMLDivElement> }) {
               </Tool>
             );
           })}
-        </div>
+        </motion.ul>
       </div>
       <div className="absolute -left-10 bottom-0 z-30 h-60 w-60 animate-pulse-slow rounded-full bg-purple-200 mix-blend-multiply blur-3xl"></div>
       <div className="absolute bottom-5 left-40 z-30 h-60 w-60 animate-pulse-slow rounded-full bg-blue-200 mix-blend-multiply blur-3xl"></div>

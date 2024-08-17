@@ -1,6 +1,6 @@
 import Link from "next/link";
-import ButtonFilled from "../buttons/ButtonFilled";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 type ProjectProps = {
   title: string;
@@ -8,14 +8,26 @@ type ProjectProps = {
   link: string;
 };
 
+const item = {
+  hidden: {
+    opacity: 0,
+    y: "90px",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
 export default function Project({ title, text, link }: ProjectProps) {
   const t = useTranslations("Projects");
 
   return (
-    <div
-      className="flex rounded-md p-[1px] group
+    <motion.li
+      className="flex rounded-md p-[1px]
     hover:bg-gradient-to-br hover:from-purple-600
     hover:via-indigo-400 hover:to-blue-500"
+      variants={item}
     >
       <div
         className="flex w-full flex-col gap-5 
@@ -34,6 +46,6 @@ export default function Project({ title, text, link }: ProjectProps) {
           )}
         </div>
       </div>
-    </div>
+    </motion.li>
   );
 }
