@@ -3,6 +3,7 @@ import Project from "./project";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import MotionLink from "../utils/motionLink";
 
 const list = {
   hidden: {
@@ -16,11 +17,7 @@ const list = {
   },
 };
 
-export default function Projects({
-  refer,
-}: {
-  refer: RefObject<HTMLDivElement>;
-}) {
+export default function Projects() {
   const t = useTranslations("Projects");
 
   const projects = [
@@ -48,14 +45,14 @@ export default function Projects({
 
   return (
     <section
-      ref={refer}
+      id="projects"
       className="flex flex-col items-center bg-neutral-900 px-4 py-24"
     >
       <motion.h2
         className="text-center text-4xl font-medium text-white md:text-5xl lg:text-left"
         initial={{ opacity: 0, y: "90px" }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{once: true,margin: "-150px"}}
+        viewport={{ once: true, margin: "-150px" }}
       >
         {t.rich("title", {
           decorated: (chunk) => (
@@ -86,13 +83,16 @@ export default function Projects({
             );
           })}
         </motion.ul>
-        <Link
+        <MotionLink
           href="https://github.com/mateusdotjs?tab=repositories"
           target="_blank"
           className="text-lg text-indigo-400 underline-offset-8 hover:underline"
+          initial={{ opacity: 0, y: "50px" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{once: true}}
         >
           {t("githubLink")}
-        </Link>
+        </MotionLink>
       </div>
     </section>
   );

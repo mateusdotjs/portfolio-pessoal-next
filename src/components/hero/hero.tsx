@@ -6,11 +6,11 @@ import Slider from "./slider";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function Hero({ refer }: { refer: RefObject<HTMLDivElement> }) {
+export default function Hero() {
   const t = useTranslations("Hero");
 
   return (
-    <section ref={refer} className="mt-20 px-3 py-24">
+    <section id="hero" className="mt-20 px-3 py-24">
       <motion.div
         initial={{ opacity: 0, y: "90px" }}
         whileInView={{ opacity: 1, y: "0px" }}

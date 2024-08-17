@@ -1,18 +1,57 @@
-import { RefObject } from "react";
 import aboutJPG from "@/assets/about/about.jpg";
 import Linkedin from "@/assets/social/linkedin.svg";
 import Github from "@/assets/social/github.svg";
 import Whatsapp from "@/assets/social/whatsapp.svg";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import MotionLink from "../utils/motionLink";
 
-export default function About({ refer }: { refer: RefObject<HTMLDivElement> }) {
+export default function About() {
   const t = useTranslations("About");
 
+  const linkList = {
+    hidden: {},
+    visible: {
+      transition: {
+        delayChildren: 0.8,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const link = {
+    hidden: {
+      opacity: 0,
+      y: "90px",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
+  const textList = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const text = {
+    hidden: {
+      opacity: 0,
+      x: "90px",
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
   return (
-    <section ref={refer} className="lg:pb-24 lg:pt-4">
+    <section id="about" className="lg:pb-24 lg:pt-4">
       <motion.div
         className="mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-10 rounded-xl border-neutral-200 bg-neutral-50 px-10 py-14 md:flex-row lg:border-2"
         initial={{ y: "100px", opacity: 0 }}
@@ -31,30 +70,59 @@ export default function About({ refer }: { refer: RefObject<HTMLDivElement> }) {
           </div>
         </div>
         <div>
-          <h2 className="mb-5 bg-clip-text text-xl font-semibold text-indigo-400">
-            {t("title")}
-          </h2>
-          <p className="mb-5 text-2xl font-semibold text-neutral-800">
-            {t("greeting")}👋
-          </p>
-          <p className="mb-10 text-xl text-neutral-500">{t("text")}</p>
-          <motion.div className="flex gap-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={textList}
+          >
+            <motion.h2
+              className="mb-5 bg-clip-text text-xl font-semibold text-indigo-400"
+              variants={text}
+            >
+              {t("title")}
+            </motion.h2>
+            <motion.p
+              className="mb-5 text-2xl font-semibold text-neutral-800"
+              variants={text}
+            >
+              {t("greeting")}👋
+            </motion.p>
+            <motion.p
+              className="mb-10 text-xl text-neutral-500"
+              variants={text}
+            >
+              {t("text")}
+            </motion.p>
+          </motion.div>
+          <motion.div
+            className="flex gap-6"
+            initial="hidden"
+            whileInView="visible"
+            variants={linkList}
+            viewport={{ once: true }}
+          >
             {/* to-do: remover código duplicado */}
-            <Link
+            <MotionLink
+              variants={link}
               href={"https://www.linkedin.com/in/mateus-soares27/"}
               target="_blank"
             >
               <Linkedin />
-            </Link>
-            <Link href={"https://github.com/mateusdotjs"} target="_blank">
+            </MotionLink>
+            <MotionLink
+              variants={link}
+              href={"https://github.com/mateusdotjs"}
+              target="_blank"
+            >
               <Github />
-            </Link>
-            <Link
+            </MotionLink>
+            <MotionLink
+              variants={link}
               href={"https://wa.me/5511954925932?text=Ol%C3%A1!"}
               target="_blank"
             >
               <Whatsapp />
-            </Link>
+            </MotionLink>
           </motion.div>
         </div>
       </motion.div>

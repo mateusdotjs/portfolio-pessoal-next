@@ -13,12 +13,11 @@ import Git from "@/assets/tools/git.svg";
 import Docker from "@/assets/tools/docker.svg";
 import Mysql from "@/assets/tools/mysql.svg";
 import Mongo from "@/assets/tools/mongo.svg";
-import { RefObject, useState } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { once } from "events";
 
-export default function Tools({ refer }: { refer: RefObject<HTMLDivElement> }) {
+export default function Tools() {
   const [toolDescription, setToolDescription] = useState<string | null>(null);
   const t = useTranslations("Tools");
 
@@ -101,7 +100,7 @@ export default function Tools({ refer }: { refer: RefObject<HTMLDivElement> }) {
   };
 
   return (
-    <section ref={refer} className="relative overflow-x-hidden py-24">
+    <section id="tools" className="relative overflow-x-hidden py-24">
       <div className="mx-auto grid w-full max-w-screen-2xl grid-cols-1 px-5 lg:grid-cols-2">
         <div>
           <motion.h2

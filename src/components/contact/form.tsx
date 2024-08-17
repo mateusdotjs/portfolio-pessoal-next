@@ -91,7 +91,7 @@ export default function Form() {
         placeholder={t("Form.Message.placeholder")}
         {...message}
       />
-      <ButtonFilled onClick={handleClick}>
+      <ButtonFilled loading={loading} onClick={handleClick}>
         {loading ? t("Form.Button.loading") : t("Form.Button.text")}
       </ButtonFilled>
     </motion.form>

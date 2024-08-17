@@ -17,16 +17,12 @@ const fadeToLeft = {
   },
 };
 
-export default function Contact({
-  refer,
-}: {
-  refer: RefObject<HTMLDivElement>;
-}) {
+export default function Contact() {
   const t = useTranslations("Contact");
 
   return (
     <section
-      ref={refer}
+      id="contact"
       className="flex flex-col items-center bg-neutral-900 px-4 py-24"
     >
       <div
