@@ -50,23 +50,23 @@ export default function Header() {
   const links = [
     {
       title: "Home",
-      id: "hero",
+      href: "hero",
     },
     {
       title: t("about"),
-      id: "about",
+      href: "about",
     },
     {
       title: t("projects"),
-      id: "projects",
+      href: "projects",
     },
     {
       title: t("tools"),
-      id: "tools",
+      href: "tools",
     },
     {
       title: t("contact"),
-      id: "contact",
+      href: "contact",
     },
   ];
 
@@ -94,11 +94,10 @@ export default function Header() {
             {links.map((link) => {
               return (
                 <li
-                  key={link.id}
-                  id={link.id}
+                  key={link.href}
                   className="cursor-pointer hover:text-indigo-500"
                 >
-                  <MotionLink variants={item} href={"#hero"}>
+                  <MotionLink variants={item} href={`#${link.href}`}>
                     {link.title}
                   </MotionLink>
                 </li>
