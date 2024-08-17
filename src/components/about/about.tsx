@@ -10,7 +10,7 @@ import MotionLink from "../utils/motionLink";
 export default function About() {
   const t = useTranslations("About");
 
-  const linkList = {
+  const linkListContainer = {
     hidden: {},
     visible: {
       transition: {
@@ -20,7 +20,7 @@ export default function About() {
     },
   };
 
-  const link = {
+  const linkListItem = {
     hidden: {
       opacity: 0,
       y: "90px",
@@ -50,6 +50,21 @@ export default function About() {
       x: 0,
     },
   };
+
+  const linksData = [
+    {
+      href: "https://www.linkedin.com/in/mateus-soares27/",
+      svg: <Linkedin />,
+    },
+    {
+      href: "https://github.com/mateusdotjs",
+      svg: <Github />,
+    },
+    {
+      href: "https://wa.me/5511954925932?text=Ol%C3%A1!",
+      svg: <Whatsapp />,
+    },
+  ];
   return (
     <section id="about" className="lg:pb-24 lg:pt-4">
       <motion.div
@@ -74,6 +89,7 @@ export default function About() {
             initial="hidden"
             whileInView="visible"
             variants={textList}
+            viewport={{ once: true }}
           >
             <motion.h2
               className="mb-5 bg-clip-text text-xl font-semibold text-indigo-400"
@@ -98,31 +114,21 @@ export default function About() {
             className="flex gap-6"
             initial="hidden"
             whileInView="visible"
-            variants={linkList}
+            variants={linkListContainer}
             viewport={{ once: true }}
           >
-            {/* to-do: remover código duplicado */}
-            <MotionLink
-              variants={link}
-              href={"https://www.linkedin.com/in/mateus-soares27/"}
-              target="_blank"
-            >
-              <Linkedin />
-            </MotionLink>
-            <MotionLink
-              variants={link}
-              href={"https://github.com/mateusdotjs"}
-              target="_blank"
-            >
-              <Github />
-            </MotionLink>
-            <MotionLink
-              variants={link}
-              href={"https://wa.me/5511954925932?text=Ol%C3%A1!"}
-              target="_blank"
-            >
-              <Whatsapp />
-            </MotionLink>
+            {linksData.map((linkData) => {
+              return (
+                <MotionLink
+                  key={linkData.href}
+                  variants={linkListItem}
+                  href={linkData.href}
+                  target="_blank"
+                >
+                  {linkData.svg}
+                </MotionLink>
+              );
+            })}
           </motion.div>
         </div>
       </motion.div>

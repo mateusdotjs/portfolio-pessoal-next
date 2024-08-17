@@ -108,7 +108,7 @@ export default function Tools() {
             initial="hidden"
             whileInView="visible"
             variants={fadeToRight}
-            viewport={{ once: true,margin: "-150px" }}
+            viewport={{ once: true, margin: "-150px" }}
           >
             {t.rich("title", {
               decorated: (chunk) => (
