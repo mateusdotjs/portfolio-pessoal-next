@@ -15,6 +15,7 @@ type MotionLinkProps = {
     hidden: object;
     visible: object;
   };
+  viewport?: object;
 };
 
 export default function MotionLink({
@@ -26,6 +27,7 @@ export default function MotionLink({
   initial,
   animate,
   whileInView,
+  viewport,
 }: MotionLinkProps) {
   return (
     <motion.div
@@ -33,6 +35,7 @@ export default function MotionLink({
       initial={initial}
       animate={animate}
       whileInView={whileInView}
+      viewport={viewport}
     >
       <Link className={className} href={href} target={target}>
         {children}
