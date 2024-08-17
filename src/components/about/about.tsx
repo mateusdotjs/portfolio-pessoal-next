@@ -1,3 +1,5 @@
+"use client"
+
 import aboutJPG from "@/assets/about/about.jpg";
 import Linkedin from "@/assets/social/linkedin.svg";
 import Github from "@/assets/social/github.svg";

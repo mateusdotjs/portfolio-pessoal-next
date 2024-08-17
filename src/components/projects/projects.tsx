@@ -1,7 +1,7 @@
-import { RefObject } from "react";
+"use client"
+
 import Project from "./project";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import MotionLink from "../utils/motionLink";
 

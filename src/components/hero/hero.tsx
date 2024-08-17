@@ -1,4 +1,5 @@
-import { RefObject } from "react";
+"use client";
+
 import ButtonFilled from "../buttons/ButtonFilled";
 import ButtonOutlined from "../buttons/ButtonOutlined";
 import { useTranslations } from "next-intl";
@@ -14,7 +15,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0, y: "90px" }}
         whileInView={{ opacity: 1, y: "0px" }}
-        viewport={{ once: true  }}
+        viewport={{ once: true }}
         className="mx-auto grid max-w-screen-xl grid-cols-1 grid-rows-1 place-items-center bg-white md:grid-cols-2"
       >
         <div className="flex flex-col gap-8">
@@ -25,9 +26,7 @@ export default function Hero() {
                   {chunk}
                 </span>
               ),
-              br: () => (
-                <br/>
-              ),
+              br: () => <br />,
             })}
             ✨
           </h1>
