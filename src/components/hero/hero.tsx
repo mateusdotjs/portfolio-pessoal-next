@@ -1,7 +1,7 @@
 "use client";
 
-import ButtonFilled from "../buttons/ButtonFilled";
-import ButtonOutlined from "../buttons/ButtonOutlined";
+import ButtonFilled from "../utils/ButtonFilled";
+import ButtonOutlined from "../utils/ButtonOutlined";
 import { useTranslations } from "next-intl";
 import Slider from "./slider";
 import Link from "next/link";
