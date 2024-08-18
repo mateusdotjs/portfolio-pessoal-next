@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import aboutJPG from "@/assets/about/about.jpg";
 import Linkedin from "@/assets/social/linkedin.svg";
@@ -70,7 +70,7 @@ export default function About() {
   return (
     <section id="about" className="lg:pb-24 lg:pt-4">
       <motion.div
-        className="mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-10 rounded-xl border-neutral-200 bg-neutral-50 px-10 py-14 md:flex-row lg:border-2"
+        className="mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-10 overflow-hidden rounded-xl border-neutral-200 bg-neutral-50 px-10 py-14 md:flex-row lg:border-2"
         initial={{ y: "100px", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
